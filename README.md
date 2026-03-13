@@ -6,6 +6,10 @@ This is a Bootstrap-style frontend CSS toolkit for command-center and sci-fi das
 
 The visual direction is inspired by the system UI seen in the anime "Gundam AGE".
 
+## Live demo
+
+[https://badleo.github.io/age-bootstrap-toolkit/](https://badleo.github.io/age-bootstrap-toolkit/)
+
 ## Repository structure
 
 ```text
