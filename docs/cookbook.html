@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AGE Toolkit Cookbook</title>
+    <meta
+      name="description"
+      content="Cookbook reference for the AGE Bootstrap Toolkit with live examples and HTML code samples."
+    />
+    <link rel="stylesheet" href="../styles/age-bootstrap.css" />
+  </head>
+  <body>
+    <div class="age-shell">
+      <div class="container-fluid">
+        <header class="navbar">
+          <div class="navbar-inner">
+            <a class="navbar-brand" href="../index.html">AGE Command Toolkit</a>
+            <nav class="nav">
+              <a class="nav-link" href="../index.html">Demo</a>
+              <a class="nav-link is-active" href="#overview">Cookbook</a>
+              <a class="nav-link" href="#forms">Forms</a>
+              <a class="nav-link" href="#media">Media</a>
+            </nav>
+          </div>
+        </header>
+
+        <main class="py-5">
+          <section id="overview" class="hero mb-5">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-7">
+                <div class="eyebrow">Documentation</div>
+                <h1 class="display-title">Cookbook for every core toolkit element</h1>
+                <p class="lead">
+                  This page is the implementation reference for the AGE Bootstrap Toolkit. Each
+                  section shows the rendered element and the HTML needed to reproduce it, so the
+                  docs work as both visual catalog and copy-paste starter.
+                </p>
+                <div class="d-flex gap-3 mt-4">
+                  <a class="btn btn-primary" href="#layout">Browse Elements</a>
+                  <a class="btn btn-outline" href="../index.html">Back To Demo</a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-5">
+                <div class="hero-radar" aria-hidden="true"></div>
+              </div>
+            </div>
+          </section>
+
+          <div class="cookbook-layout">
+            <aside class="cookbook-sidebar">
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">Index</div>
+                    <h2 class="section-title">Sections</h2>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <nav class="cookbook-nav">
+                    <a class="nav-link is-active" href="#layout">Layout</a>
+                    <a class="nav-link" href="#tokens">Tokens</a>
+                    <a class="nav-link" href="#typography">Typography</a>
+                    <a class="nav-link" href="#actions">Buttons & Badges</a>
+                    <a class="nav-link" href="#surfaces">Panels & Stats</a>
+                    <a class="nav-link" href="#data">Tables & Progress</a>
+                    <a class="nav-link" href="#status">Status & Timeline</a>
+                    <a class="nav-link" href="#forms">Forms</a>
+                    <a class="nav-link" href="#media">Gallery & Terminal</a>
+                  </nav>
+                </div>
+              </article>
+            </aside>
+
+            <div class="cookbook-stack">
+              <article id="layout" class="panel cookbook-section">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">Structure</div>
+                    <h2 class="section-title">Layout Grid</h2>
+                  </div>
+                  <span class="badge">Bootstrap Format</span>
+                </div>
+                <div class="panel-body">
+                  <p class="cookbook-note">
+                    Use the standard structure of <code>.container</code> or
+                    <code>.container-fluid</code>, then <code>.row</code>, then
+                    <code>.col-*</code> responsive columns.
+                  </p>
+                  <div class="cookbook-demo-grid">
+                    <div class="cookbook-preview">
+                      <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4"><div class="grid-demo-cell">col-4</div></div>
+                        <div class="col-12 col-md-6 col-lg-4"><div class="grid-demo-cell">col-4</div></div>
+                        <div class="col-12 col-md-12 col-lg-4"><div class="grid-demo-cell">col-4</div></div>
+                      </div>
+                    </div>
+                    <pre class="code-block"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;...&lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;...&lt;/div&gt;
+    &lt;div class="col-12 col-md-12 col-lg-4"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <article id="tokens" class="panel cookbook-section">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">Theme</div>
+                    <h2 class="section-title">Core Tokens</h2>
+                  </div>
+                  <span class="badge badge-warning">Override Ready</span>
+                </div>
+                <div class="panel-body">
+                  <div class="swatch-grid mb-4">
+                    <div class="swatch">
+                      <div class="swatch-chip" style="background:#47d3ff"></div>
+                      <div class="fw-bold">Primary</div>
+                      <div class="text-muted">#47d3ff</div>
+                    </div>
+                    <div class="swatch">
+                      <div class="swatch-chip" style="background:#634bff"></div>
+                      <div class="fw-bold">Secondary</div>
+                      <div class="text-muted">#634bff</div>
+                    </div>
+                    <div class="swatch">
+                      <div class="swatch-chip" style="background:#ffe53b"></div>
+                      <div class="fw-bold">Warning</div>
+                      <div class="text-muted">#ffe53b</div>
+                    </div>
+                    <div class="swatch">
+                      <div class="swatch-chip" style="background:#ff5c7a"></div>
+                      <div class="fw-bold">Danger</div>
+                      <div class="text-muted">#ff5c7a</div>
+                    </div>
+                  </div>
+                  <pre class="code-block"><code>:root {
+  --age-primary: #47d3ff;
+  --age-secondary: #634bff;
+  --age-warning: #ffe53b;
+  --age-danger: #ff5c7a;
+  --age-success: #6df7a6;
+  --age-radius: 18px;
+  --age-gap: 1.5rem;
+}</code></pre>
+                </div>
+              </article>
+
+              <article id="typography" class="panel cookbook-section">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">Type</div>
+                    <h2 class="section-title">Typography & Hero Copy</h2>
+                  </div>
+                  <span class="badge">Display System</span>
+                </div>
+                <div class="panel-body">
+                  <div class="cookbook-demo-grid">
+                    <div class="cookbook-preview">
+                      <div class="eyebrow">System Label</div>
+                      <h2 class="display-title" style="font-size:clamp(2rem,4vw,3.5rem)">Command Heading</h2>
+                      <p class="lead mb-0">
+                        Use display titles for large command-center messaging and lead text for
+                        descriptive support copy.
+                      </p>
+                    </div>
+                    <pre class="code-block"><code>&lt;div class="eyebrow"&gt;System Label&lt;/div&gt;
+&lt;h1 class="display-title"&gt;Command Heading&lt;/h1&gt;
+&lt;p class="lead"&gt;
+  Use display titles for large command-center messaging.
+&lt;/p&gt;</code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <article id="actions" class="panel cookbook-section">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">Actions</div>
+                    <h2 class="section-title">Buttons & Badges</h2>
+                  </div>
+                  <span class="badge badge-success">Interactive</span>
+                </div>
+                <div class="panel-body">
+                  <div class="cookbook-demo-grid">
+                    <div class="cookbook-preview">
+                      <div class="d-flex gap-3 mb-4" style="flex-wrap:wrap">
+                        <button class="btn btn-primary">Primary</button>
+                        <button class="btn btn-warning">Warning</button>
+                        <button class="btn btn-outline">Outline</button>
+                      </div>
+                      <div class="d-flex gap-3" style="flex-wrap:wrap">
+                        <span class="badge">Live</span>
+                        <span class="badge badge-success">Ready</span>
+                        <span class="badge badge-warning">Watch</span>
+                        <span class="badge badge-danger">Breach</span>
+                      </div>
+                    </div>
+                    <pre class="code-block"><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;
+
+&lt;span class="badge"&gt;Live&lt;/span&gt;
+&lt;span class="badge badge-success"&gt;Ready&lt;/span&gt;
+&lt;span class="badge badge-warning"&gt;Watch&lt;/span&gt;
+&lt;span class="badge badge-danger"&gt;Breach&lt;/span&gt;</code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <article id="surfaces" class="panel cookbook-section">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">Surfaces</div>
+                    <h2 class="section-title">Panels, Cards, Stats</h2>
+                  </div>
+                  <span class="badge">Composable</span>
+                </div>
+                <div class="panel-body">
+                  <div class="cookbook-demo-grid">
+                    <div class="cookbook-preview">
+                      <article class="card mb-4">
+                        <div class="card-header">
+                          <h3 class="section-title">Telemetry Card</h3>
+                          <span class="badge">Live</span>
+                        </div>
+                        <div class="card-body">
+                          <p class="mb-0 text-muted">Use for modular content blocks inside dashboards.</p>
+                        </div>
+                      </article>
+                      <div class="kpi-grid">
+                        <article class="stat">
+                          <div class="stat-label">Signal</div>
+                          <div class="stat-kpi">81%</div>
+                          <div class="stat-trend">+4.2%</div>
+                        </article>
+                        <article class="stat">
+                          <div class="stat-label">Sectors</div>
+                          <div class="stat-kpi text-warning">12</div>
+                          <div class="stat-trend">2 pending</div>
+                        </article>
+                      </div>
+                    </div>
+                    <pre class="code-block"><code>&lt;article class="card"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;h3 class="section-title"&gt;Telemetry Card&lt;/h3&gt;
+    &lt;span class="badge"&gt;Live&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;...&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;article class="stat"&gt;
+  &lt;div class="stat-label"&gt;Signal&lt;/div&gt;
+  &lt;div class="stat-kpi"&gt;81%&lt;/div&gt;
+  &lt;div class="stat-trend"&gt;+4.2%&lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <article id="data" class="panel cookbook-section">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">Data Display</div>
+                    <h2 class="section-title">Tables & Progress Bars</h2>
+                  </div>
+                  <span class="badge badge-warning">Operational</span>
+                </div>
+                <div class="panel-body">
+                  <div class="cookbook-demo-grid">
+                    <div class="cookbook-preview">
+                      <table class="table mb-4">
+                        <thead>
+                          <tr>
+                            <th>Zone</th>
+                            <th>Status</th>
+                            <th>Load</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>AGE-1S</td>
+                            <td><span class="badge badge-success">Stable</span></td>
+                            <td>92%</td>
+                          </tr>
+                          <tr>
+                            <td>OUT-R</td>
+                            <td><span class="badge badge-warning">Watch</span></td>
+                            <td>67%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="progress"><div class="progress-bar" style="width:72%"></div></div>
+                    </div>
+                    <pre class="code-block"><code>&lt;table class="table"&gt;
+  &lt;thead&gt;...&lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;AGE-1S&lt;/td&gt;
+      &lt;td&gt;&lt;span class="badge badge-success"&gt;Stable&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;92%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width:72%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <article id="status" class="panel cookbook-section">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">State Systems</div>
+                    <h2 class="section-title">Status Lists & Timeline</h2>
+                  </div>
+                  <span class="badge badge-danger">Alerting</span>
+                </div>
+                <div class="panel-body">
+                  <div class="cookbook-demo-grid">
+                    <div class="cookbook-preview">
+                      <div class="status-list mb-4">
+                        <div class="status-item">
+                          <div class="status-cluster">
+                            <span class="status-dot text-success"></span>
+                            <div>
+                              <div>Relay Spine</div>
+                              <div class="text-muted">Nominal</div>
+                            </div>
+                          </div>
+                          <span class="badge badge-success">Ready</span>
+                        </div>
+                      </div>
+                      <div class="timeline">
+                        <div class="timeline-item">
+                          <strong>12:04 UTC</strong>
+                          <div class="text-muted">Signal bloom detected.</div>
+                        </div>
+                        <div class="timeline-item">
+                          <strong>12:31 UTC</strong>
+                          <div class="text-muted">Auxiliary mesh rerouted.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre class="code-block"><code>&lt;div class="status-list"&gt;
+  &lt;div class="status-item"&gt;
+    &lt;div class="status-cluster"&gt;
+      &lt;span class="status-dot text-success"&gt;&lt;/span&gt;
+      &lt;div&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class="badge badge-success"&gt;Ready&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="timeline"&gt;
+  &lt;div class="timeline-item"&gt;...&lt;/div&gt;
+  &lt;div class="timeline-item"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <article id="forms" class="panel cookbook-section">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">Inputs</div>
+                    <h2 class="section-title">Form Controls</h2>
+                  </div>
+                  <span class="badge">Inputs</span>
+                </div>
+                <div class="panel-body">
+                  <div class="cookbook-demo-grid">
+                    <div class="cookbook-preview">
+                      <div class="mb-3">
+                        <label class="form-label" for="cookbook-name">Sector Name</label>
+                        <input class="form-control" id="cookbook-name" value="AGE-1S" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="cookbook-mode">Mode</label>
+                        <select class="form-select" id="cookbook-mode">
+                          <option>Recon</option>
+                          <option>Defense</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="cookbook-directive">Directive</label>
+                        <textarea class="form-textarea" id="cookbook-directive">Deploy reusable panels and status widgets.</textarea>
+                      </div>
+                      <div class="input-group">
+                        <button class="btn btn-primary">Transmit</button>
+                        <button class="btn btn-outline">Archive</button>
+                      </div>
+                    </div>
+                    <pre class="code-block"><code>&lt;label class="form-label" for="sector"&gt;Sector Name&lt;/label&gt;
+&lt;input class="form-control" id="sector" value="AGE-1S" /&gt;
+
+&lt;label class="form-label" for="mode"&gt;Mode&lt;/label&gt;
+&lt;select class="form-select" id="mode"&gt;...&lt;/select&gt;
+
+&lt;label class="form-label" for="directive"&gt;Directive&lt;/label&gt;
+&lt;textarea class="form-textarea" id="directive"&gt;&lt;/textarea&gt;
+
+&lt;div class="input-group"&gt;
+  &lt;button class="btn btn-primary"&gt;Transmit&lt;/button&gt;
+  &lt;button class="btn btn-outline"&gt;Archive&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <article id="media" class="panel cookbook-section">
+                <div class="panel-header">
+                  <div>
+                    <div class="meta-label">Media</div>
+                    <h2 class="section-title">Gallery & Terminal</h2>
+                  </div>
+                  <span class="badge badge-success">Reference</span>
+                </div>
+                <div class="panel-body">
+                  <div class="cookbook-demo-grid">
+                    <div class="cookbook-preview">
+                      <div class="gallery mb-4">
+                        <figure class="sample-shot">
+                          <div class="hero" style="padding:1rem; border-radius:18px;">
+                            <div class="eyebrow">Gallery Tile</div>
+                            <div class="section-title">Reusable visual block</div>
+                          </div>
+                          <figcaption>Publish-safe gallery block.</figcaption>
+                        </figure>
+                      </div>
+                      <article class="terminal">
+                        <div class="terminal-body">
+                          <div class="terminal-line"><span class="terminal-prompt">&gt;</span><span>bootstrap grid initialized</span></div>
+                          <div class="terminal-line"><span class="terminal-prompt">&gt;</span><span>panel schema synchronized</span></div>
+                        </div>
+                      </article>
+                    </div>
+                    <pre class="code-block"><code>&lt;figure class="sample-shot"&gt;
+  &lt;div class="hero"&gt;
+    &lt;div class="eyebrow"&gt;Gallery Tile&lt;/div&gt;
+    &lt;div class="section-title"&gt;Reusable visual block&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;figcaption&gt;Publish-safe gallery block.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;article class="terminal"&gt;
+  &lt;div class="terminal-body"&gt;
+    &lt;div class="terminal-line"&gt;
+      &lt;span class="terminal-prompt"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span&gt;bootstrap grid initialized&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-header">
+                  <div>
+                    <div class="meta-label">Coverage</div>
+                    <h2 class="section-title">Included Elements</h2>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="list-clean text-muted">
+                    <li>Layout primitives: containers, rows, responsive columns</li>
+                    <li>Typography: eyebrow, display title, lead, section titles</li>
+                    <li>Actions: buttons and badges</li>
+                    <li>Surfaces: panel, card, well, stat blocks</li>
+                    <li>Data display: table and progress</li>
+                    <li>State display: status items and timeline</li>
+                    <li>Inputs: text, select, textarea, input groups</li>
+                    <li>Media: gallery tiles and terminal output blocks</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
