@@ -1,5 +1,7 @@
 # AGE Bootstrap Toolkit
 
+![AGE Bootstrap Toolkit logo](./assets/age-toolkit-logo.svg)
+
 This is a Bootstrap-style frontend CSS toolkit for command-center and sci-fi dashboard interfaces.
 
 The visual direction is inspired by the system UI seen in the anime "Gundam AGE".
@@ -12,6 +14,8 @@ The visual direction is inspired by the system UI seen in the anime "Gundam AGE"
 ├─ README.md
 ├─ CONTRIBUTING.md
 ├─ LICENSE
+├─ assets/
+│  └─ age-toolkit-logo.svg
 ├─ styles/
 │  └─ age-bootstrap.css
 ├─ docs/

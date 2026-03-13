@@ -1,0 +1,46 @@
+<svg width="332" height="232" viewBox="44 44 332 232" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">AGE Bootstrap Toolkit logo</title>
+  <desc id="logoDesc">A futuristic cyan and gold emblem with AGE wordmark for the AGE Bootstrap Toolkit.</desc>
+  <defs>
+    <linearGradient id="bgGlow" x1="94" y1="32" x2="350" y2="288" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#143985"/>
+      <stop offset="1" stop-color="#040D29"/>
+    </linearGradient>
+    <linearGradient id="frameStroke" x1="102" y1="40" x2="342" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1CF6FF"/>
+      <stop offset="0.65" stop-color="#47D3FF"/>
+      <stop offset="1" stop-color="#634BFF"/>
+    </linearGradient>
+    <linearGradient id="goldFill" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF18A"/>
+      <stop offset="1" stop-color="#FFE53B"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="44" y="44" width="332" height="232" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.109804 0 0 0 0 0.964706 0 0 0 0 1 0 0 0 0.3 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+    <filter id="goldGlow" x="112" y="78" width="196" height="164" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1 0 0 0 0 0.898039 0 0 0 0 0.231373 0 0 0 0.45 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+  </defs>
+  <path d="M78 48H342L366 72V248L342 272H78L54 248V72L78 48Z" fill="url(#bgGlow)"/>
+  <g filter="url(#cyanGlow)">
+    <path d="M86 56H334L358 80V240L334 264H86L62 240V80L86 56Z" stroke="url(#frameStroke)" stroke-width="4"/>
+    <path d="M114 88H306L326 108V212L306 232H114L94 212V108L114 88Z" stroke="#47D3FF" stroke-opacity="0.35" stroke-width="2"/>
+    <path d="M210 70V250" stroke="#47D3FF" stroke-opacity="0.28" stroke-width="2" stroke-dasharray="8 8"/>
+    <path d="M106 160H314" stroke="#47D3FF" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="10 10"/>
+    <circle cx="210" cy="160" r="54" stroke="#47D3FF" stroke-opacity="0.2" stroke-width="2"/>
+    <circle cx="210" cy="160" r="86" stroke="#47D3FF" stroke-opacity="0.16" stroke-width="2"/>
+    <path d="M210 110L244 160L210 210L176 160L210 110Z" fill="#47D3FF" fill-opacity="0.12" stroke="#1CF6FF" stroke-width="2"/>
+    <path d="M130 122L158 96H194L176 122H130Z" fill="url(#goldFill)" filter="url(#goldGlow)"/>
+    <path d="M226 96H262L290 122H244L226 96Z" fill="url(#goldFill)" filter="url(#goldGlow)"/>
+    <path d="M138 198H178L194 224H158L138 198Z" fill="url(#goldFill)" filter="url(#goldGlow)"/>
+    <path d="M226 224L242 198H282L262 224H226Z" fill="url(#goldFill)" filter="url(#goldGlow)"/>
+  </g>
+
+</svg>

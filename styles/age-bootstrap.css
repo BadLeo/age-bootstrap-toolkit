@@ -226,13 +226,37 @@ img {
   font-size: 1rem;
 }
 
-.navbar-brand::before {
-  content: "";
-  width: 1.1rem;
-  height: 1.1rem;
-  border-radius: 0.2rem;
-  background: linear-gradient(180deg, var(--age-warning), #ffcb05);
-  box-shadow: 0 0 20px rgba(255, 229, 59, 0.55);
+.brand-mark {
+  width: 2.4rem;
+  height: 2.4rem;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 0 16px rgba(28, 246, 255, 0.22));
+}
+
+.brand-text {
+  display: grid;
+  gap: 0.1rem;
+  line-height: 1;
+}
+
+.brand-title {
+  color: var(--age-ink);
+  font-family: var(--age-font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.brand-subtitle {
+  color: var(--age-warning);
+  font-size: 0.56rem;
+  letter-spacing: 0.24em;
+}
+
+.hero-logo {
+  width: min(100%, 27rem);
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 22px rgba(28, 246, 255, 0.18));
 }
 
 .nav {

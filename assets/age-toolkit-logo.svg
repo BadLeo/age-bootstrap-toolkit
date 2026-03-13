@@ -1,0 +1,54 @@
+<svg width="960" height="320" viewBox="0 0 1024 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">AGE Bootstrap Toolkit logo</title>
+  <desc id="logoDesc">A futuristic cyan and gold emblem with AGE wordmark for the AGE Bootstrap Toolkit.</desc>
+  <defs>
+    <linearGradient id="bgGlow" x1="64" y1="32" x2="320" y2="288" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#143985"/>
+      <stop offset="1" stop-color="#040D29"/>
+    </linearGradient>
+    <linearGradient id="frameStroke" x1="72" y1="40" x2="312" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1CF6FF"/>
+      <stop offset="0.65" stop-color="#47D3FF"/>
+      <stop offset="1" stop-color="#634BFF"/>
+    </linearGradient>
+    <linearGradient id="goldFill" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF18A"/>
+      <stop offset="1" stop-color="#FFE53B"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="0" y="0" width="420" height="320" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.109804 0 0 0 0 0.964706 0 0 0 0 1 0 0 0 0.3 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+    <filter id="goldGlow" x="-24" y="-24" width="1072" height="368" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1 0 0 0 0 0.898039 0 0 0 0 0.231373 0 0 0 0.45 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="320" rx="32" fill="#020616"/>
+  <path d="M32 96C156 18 354 16 506 76C640 128 789 130 928 78" stroke="#47D3FF" stroke-opacity="0.1" stroke-width="2"/>
+  <path d="M32 244C180 188 342 186 484 218C622 249 786 255 928 224" stroke="#634BFF" stroke-opacity="0.16" stroke-width="2"/>
+  <path d="M48 48H312L336 72V248L312 272H48L24 248V72L48 48Z" fill="url(#bgGlow)"/>
+  <g filter="url(#cyanGlow)">
+    <path d="M56 56H304L328 80V240L304 264H56L32 240V80L56 56Z" stroke="url(#frameStroke)" stroke-width="4"/>
+    <path d="M84 88H276L296 108V212L276 232H84L64 212V108L84 88Z" stroke="#47D3FF" stroke-opacity="0.35" stroke-width="2"/>
+    <path d="M180 70V250" stroke="#47D3FF" stroke-opacity="0.28" stroke-width="2" stroke-dasharray="8 8"/>
+    <path d="M76 160H284" stroke="#47D3FF" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="10 10"/>
+    <circle cx="180" cy="160" r="54" stroke="#47D3FF" stroke-opacity="0.2" stroke-width="2"/>
+    <circle cx="180" cy="160" r="86" stroke="#47D3FF" stroke-opacity="0.16" stroke-width="2"/>
+    <path d="M180 110L214 160L180 210L146 160L180 110Z" fill="#47D3FF" fill-opacity="0.12" stroke="#1CF6FF" stroke-width="2"/>
+    <path d="M100 122L128 96H164L146 122H100Z" fill="url(#goldFill)" filter="url(#goldGlow)"/>
+    <path d="M196 96H232L260 122H214L196 96Z" fill="url(#goldFill)" filter="url(#goldGlow)"/>
+    <path d="M108 198H148L164 224H128L108 198Z" fill="url(#goldFill)" filter="url(#goldGlow)"/>
+    <path d="M196 224L212 198H252L232 224H196Z" fill="url(#goldFill)" filter="url(#goldGlow)"/>
+  </g>
+  <g filter="url(#goldGlow)">
+    <text x="390" y="134" fill="#EEF7FF" font-family="Orbitron, Rajdhani, Arial Narrow, sans-serif" font-size="88" font-weight="800" letter-spacing="0.12em">AGE</text>
+    <rect x="392" y="152" width="220" height="6" rx="3" fill="url(#frameStroke)"/>
+    <text x="392" y="206" fill="#FFE53B" font-family="Orbitron, Rajdhani, Arial Narrow, sans-serif" font-size="30" font-weight="700" letter-spacing="0.28em">BOOTSTRAP TOOLKIT</text>
+    <text x="392" y="248" fill="#86A4D6" font-family="Rajdhani, Arial Narrow, sans-serif" font-size="20" font-weight="600" letter-spacing="0.14em">SCI-FI UI SYSTEM FOR COMMAND-GRADE INTERFACES</text>
+  </g>
+</svg>
