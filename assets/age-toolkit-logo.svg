@@ -49,6 +49,6 @@
     <text x="390" y="134" fill="#EEF7FF" font-family="Orbitron, Rajdhani, Arial Narrow, sans-serif" font-size="88" font-weight="800" letter-spacing="0.12em">AGE</text>
     <rect x="392" y="152" width="220" height="6" rx="3" fill="url(#frameStroke)"/>
     <text x="392" y="206" fill="#FFE53B" font-family="Orbitron, Rajdhani, Arial Narrow, sans-serif" font-size="30" font-weight="700" letter-spacing="0.28em">BOOTSTRAP TOOLKIT</text>
-    <text x="392" y="248" fill="#86A4D6" font-family="Rajdhani, Arial Narrow, sans-serif" font-size="20" font-weight="600" letter-spacing="0.14em">SCI-FI UI SYSTEM FOR COMMAND-GRADE INTERFACES</text>
+    <text x="392" y="248" fill="#86A4D6" font-family="Rajdhani, Arial Narrow, sans-serif" font-size="15" font-weight="600" letter-spacing="0.14em">SCI-FI UI SYSTEM FOR COMMAND-GRADE INTERFACES</text>
   </g>
 </svg>
