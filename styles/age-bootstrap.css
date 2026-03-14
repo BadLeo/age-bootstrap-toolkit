@@ -159,6 +159,7 @@ img {
 .age-shell {
   position: relative;
   padding: 1.25rem 0 3rem;
+  overflow-x: hidden;
 }
 
 .age-shell::before,
